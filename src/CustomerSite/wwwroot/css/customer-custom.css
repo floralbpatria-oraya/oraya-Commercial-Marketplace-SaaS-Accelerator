@@ -1,5 +1,6 @@
 ﻿body {
-    font-family: 'Segoe UI', 'sans-serif' !important;
+/*    font-family: 'Segoe UI', 'sans-serif' !important;*/
+    font-family: 'arial', 'ubuntu' !important;
     color: black !important;
     font-size: 16px !important;
     height: 100%;
@@ -359,4 +360,9 @@ a.cm-dropdown-option {
 }
 .red-star {
     color: red;
+}
+
+.countrySelector {
+    width: 200px;
+    height: 35px;
 }

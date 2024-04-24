@@ -44,7 +44,7 @@
                             @Html.DisplayName("Change Plan")
                         </dt>
                         <dd class="">
-                            @Html.DropDownListFor(s => s.PlanId, new SelectList(Model.PlanList, "PlanId", "PlanId", Model.PlanId), new { @class = "form-control w-100" })
+                            @Html.DropDownListFor(s => s.PlanId, new SelectList(Model.PlanList, "PlanId", "DisplayName", Model.PlanId), new { @class = "form-control w-100" })
                             @Html.HiddenFor(s => s.Id)
                             @Html.HiddenFor(s => s.PlanId)
                             @Html.HiddenFor(s => s.SubscribeId)
