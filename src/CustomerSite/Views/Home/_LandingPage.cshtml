@@ -310,9 +310,8 @@ else
         { name: "Colombia", code: "co" }
     ];
 
-    const DEFAULT_COUNTRY = 'de';
 
-    function createSelect(appendTo) {
+    function createSelect(appendTo, DEFAULT_COUNTRY) {
         const select = document.createElement("select");
         select.classList.add('countrySelector')
 
@@ -331,10 +330,10 @@ else
 
     window.addEventListener('DOMContentLoaded', function () {
         const countryElement = document.querySelector('dd #SubscriptionParameters_1__Value')
-        if (countryElement) {
+        if (countryElement && countryElement.type === 'text') {
             countryElement.type = 'hidden';
-            countryElement.value = DEFAULT_COUNTRY;
-            const contrySelect = createSelect(countryElement.parentElement)
+            if (countryElement.value === '') countryElement.value = 'de';
+            const contrySelect = createSelect(countryElement.parentElement, countryElement.value)
             contrySelect.addEventListener("change", (event) => {
                 countryElement.value = event.target.value
             });
